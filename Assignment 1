@@ -1,0 +1,14 @@
+def isPrime(n):
+    if (n % 2 == 0):
+        return False
+    for i in range(3, int(n**0.5 + 1), 2):
+        if (n % i == 0):
+            return False
+    return True
+def countPrimes(list_of_numbers):
+    count = 0
+    for num in list_of_numbers:
+        if isPrime(num):
+            count = count + 1
+    return count
+print(countPrimes([3,10,32,13,70]))
